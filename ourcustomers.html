@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Burgers Factory</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="nav-branding">BURGERS FACTORY</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="# " class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">Our Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ourcustomers.html" class="nav-link">Our Customers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ourrestaurants.html" class="nav-link">Our Restaurants</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="center">
+            <div id="info">
+                <h1 id="createCustomerHeader">Create your self as customer</h1>
+                <p id="createCustomerParagraph">If you are saitsifed with our burgers and pizzas and sodas and vodkas,
+                    we
+                    would like to have
+                    you as a customer
+                    in our database. Please create yourself as a decent human being. With first and last name, as well
+                    the
+                    email.
+                    Have a great day, with love from burgers and cow meat and a good steak with BBQ.
+                </p>
+                <div id="newCustomerInfo" style="display:none;">
+                    <input type="text" id="firstName" placeholder="First name">
+                    <input type="text" id="lastName" placeholder="Last name">
+                    <input type="text" id="email" placeholder="Email">
+                    <button onclick="createCustomerAPI();">Create customer</button>
+                </div>
+                <button onclick="createCustomerInfo();" id="createCustomerInfo">Click to create</button>
+            </div><br />
+            <img src="image/new-customer.png" id="img">
+        </div>
+
+        <div id="customer-cards">
+        </div>
+
+       
+
+    </main>
+   <script src="scriptusers.js"></script>
+    <script src="scriptHambruger.js"></script>
+</body>
+
+</html>

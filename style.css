@@ -1,0 +1,544 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ms+Madi&display=swap');
+
+header {
+    background-color: rgb(0, 0, 0);
+
+
+}
+
+body {
+    background-color: yellow;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 20px;
+    font-style: italic;
+
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+}
+
+
+.nav-branding {
+    font-size: 50px;
+    font-style: normal;
+    text-decoration: underline;
+
+
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: yellow;
+}
+
+
+@media(max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        text-align: center;
+        transition: 0.5s;
+        z-index: 1000;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.flex-container img {
+    padding: 20px;
+    width: 500px;
+    height: 400px;
+}
+
+
+.description {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 3px #f2ff00, 0 0 5px #f2ff00;
+    text-indent: 40px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    width: 200px;
+    height: 200px;
+
+}
+
+button {
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    background-color: rgb(255, 247, 0);
+    color: rgb(0, 0, 0);
+}
+
+/* accordion */
+.accordion {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0);
+    color: yellow;
+    cursor: pointer;
+    padding: 10px;
+    width: 50%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 35px;
+    transition: 0.4s;
+    margin-top: 120px;
+}
+
+.container {
+    position: relative;
+    margin: 10px;
+    background-color: cadetblue;
+}
+
+.accordion-title {
+    position: relative;
+    padding: 8px;
+    cursor: pointer;
+    ;
+}
+
+.accordion-title::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    font-size: 25px;
+}
+
+.accordion-content {
+    position: relative;
+    background-color: antiquewhite;
+    height: 0;
+    font-size: 22px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container.active .accordion-content {
+    height: 200px;
+}
+
+.container.active .accordion-title::before {
+    content: '-';
+    font-size: 25px;
+}
+
+
+
+.aboutus {
+    background-color: yellow;
+    padding: 45px;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.about {
+
+    color: rgb(0, 0, 0)
+}
+
+#myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#myTable th,
+#myTable td {
+    text-align: left;
+    padding: 12px;
+}
+
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header,
+#myTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+.slide {
+    width: 100%;
+    display: block;
+}
+
+.slide-bg {
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-slider {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(111, 111, 102);
+    color: #fff;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 30px;
+    color: #fff200;
+}
+
+.arrow-right {
+    right: 30px;
+    color: #fff200;
+}
+
+.title-slider {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: rgb(0, 0, 0);
+    display: none;
+}
+
+/* dots styles   */
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.dots-wraper {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+}
+
+.dot.active {
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+#indextext {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 3px #ffff00, 0 0 5px #000000;
+    font-size: 40px;
+
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+#indextext:hover {
+    color: rgb(0, 0, 0);
+    box-shadow: 10px 10px 5px rgb(255, 204, 0);
+}
+
+#burgerimage {
+    margin-top: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+/* footer */
+
+.footercontainer {
+    max-width: 100%;
+
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer {
+    display: block;
+    background-color: #fff200;
+    margin-top: 200px;
+    height: 400px;
+
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    position: relative;
+    font-weight: 1000;
+    position: relative;
+}
+
+.footer ul {
+    list-style: none;
+
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 35px;
+    padding: 8px;
+}
+
+.footer-col ul li a {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+
+}
+
+.footer-col ul li a:hover {
+
+    padding-left: 10px;
+}
+
+.footer-col .social a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+}
+
+.footer-col .social a:hover {
+    color: #5a5e68;
+    background-color: rgb(207, 248, 248);
+
+}
+
+@media(max-width: 768px) {
+
+
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+button {
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    background-color: rgb(255, 247, 0);
+    color: rgb(0, 0, 0);
+}
+
+
+.error-text {
+    color: red;
+    font-size: 14px;
+    font-style: italic;
+    display: block;
+
+}
+
+/* show password */
+.fa-eye {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+/* email validation */
+#email-text {
+    display: block;
+}
+
+#form-wraper {
+    position: relative;
+}
+
+input[type="email"]:focus {
+    outline: none;
+}
+
+.input-box {
+    position: relative;
+    width: 700px;
+}
+
+.email {
+    position: relative;
+}
+
+.title {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#form-wraper.invalid .email::before {
+    content: '\2612';
+    position: absolute;
+    right: 100px;
+}
+
+#form-wraper.valid .email::before {
+    content: '\2611';
+    position: absolute;
+    right: 100px;
+}
+
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 5px solid #FFFF00;
+    padding: 10px;
+    position: fixed;
+    margin-left: 29%;
+}
+
+.menu-button{
+    color: rgb(255, 0, 0);
+    font-size: 28px;
+}
+

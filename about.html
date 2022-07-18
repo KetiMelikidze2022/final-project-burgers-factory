@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Burgers Factory</title>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+
+    <a href="index.html" class="nav-branding">BURGERS FACTORY</a>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="# " class="nav-link">Home</a>      
+        </li>
+        <li class="nav-item">
+            <a href="menu.html" class="nav-link">Our Menu</a>      
+        </li>
+        <li class="nav-item">
+            <a href="ourcustomers.html" class="nav-link">Our Customers</a>      
+        </li>
+        <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>      
+        </li>
+        <li class="nav-item">
+            <a href="ourrestaurants.html" class="nav-link">Our Restaurants</a>      
+        </li>
+    </ul>
+
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+  </nav>
+
+
+</header>
+
+
+<h2></h2>
+
+<button class="accordion">about us</button>
+<div class="panel">
+  <p>Founded in 2007, in Denver, CO, the first Burger Factory opened with one single notion in mind; to serve a better burger and, in the process, helped create a new category. The every bite a better burger experience is known for their namesake smashing technique – smashing a fresh, never frozen, 100% Certified Angus Beef hand-packed ball of meat on a hot seasoned grill – delivering an elevated burger experience, where every bite is made to savor.
+
+    With an average of 20 new stores opening every year, Smashburger delivers a bold, memorable and relatable taste through our obsession with the culinary process of burger creation. Our menu features signature 100% Certified Angus Beef Burgers grilled in an open kitchen easily viewable by customers, serving up signature options such as the Classic Smash, Double Bacon Smash, Smoked Bacon Brisket Burger, on line alongside both grilled and crispy chicken sandwiches, turkey and black bean burgers, fresh crisp salads and signature side items such as Brussels sprouts, rosemary drizzled SmashFries® and hand-spun shakes made with Häagen-Dazs ice cream.</p>
+</div>
+
+<button class="accordion">our vision</button>
+<div class="panel">
+  <p>We want to be the best burger restaurant for the next generation of burger lovers. Delivering this requires everything the Smashburger brand stands for: the highest quality ingredients; an exceptional “smashing” culinary technique; modern, inspired curated recipes; and menu variety that satisfies virtually all occasions and situations.
+
+    From our fresh, never frozen 100% Certified Angus Beef® that’s smashed, seasoned, and seared on the grill to our butter-toasted artisan buns and quality cheeses, toppings, and sauces, the delicious taste of a Smashburger defines what a great burger should be… and you are one bite away from believing!
+    
+    Add our variety of chicken, turkey, or black bean entrées, salads, signature sides, hand-spun shakes made with Häagen-Dazs® ice cream, and our convenient service and restaurant-quality presentations, we are confident Smashburger will be the burger restaurant of the future.</p>
+</div>
+
+<button class="accordion">OUR SERVICE</button>
+<div class="panel">
+  <p >What can you add to burger factory great tasting menu? Easy! A high level of service and a laidback environment that lets you enjoy it.
+
+    Make Smashburger your go-to for a wide variety of occasions, a quick lunch, date night, family dinner, even team events after the game. Our service starts at our friendly counter where you place your order. After that, it’s all on us. Grab a table and we’ll deliver your food right to you. We serve all of our food restaurant-style. Our hand-spun milkshakes made with Häagen-Dazs® ice cream are served in frozen parfait glasses with tins on the side. Even our beers are served in frozen beer glasses.
+    
+    burger’s newest design has been translated into a new, more thoughtful and elevated experience for our guests. We opened-up views into the kitchen (where the smashing takes place!) and literally set-up bleachers so those new to the Smash experience could see how it’s done. Enjoy a delicious burger in our comfortable dine-in experience that is the perfect complement to our great food..</p>
+</div>
+
+<script>
+let accordion = document.getElementsByClassName("accordion");
+let i;
+
+for (i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+
+let hamburger = document.querySelector(".hamburger");
+let navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(x => x.addEventListener("click", () => { console.log('Added click listener') }));
+</script>
+
+<footer class="footer">
+
+    <div class="footercontainer">
+
+        <div class="row">
+            <div class="footer-col">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="menu.html">Burgers/Pizzas</a></li>
+                    <li><a href="menu.html">Beverages</a></li>
+                    <li><a href="desserts..html">Desserts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>about us</h3>
+                <ul>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="ourrestaurants.html">Address</a></li>
+                </ul>
+                <p class="all">
+                    All Rights Reserved
+                </p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>follow us</h3>
+                <div class="social">
+                    <a
+                        href="#"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                   
+
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

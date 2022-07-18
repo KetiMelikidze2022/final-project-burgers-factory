@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Burgers Factory</title>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+
+    <a href="index.html" class="nav-branding">BURGERS FACTORY</a>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="# " class="nav-link">Home</a>      
+        </li>
+        <li class="nav-item">
+            <a href="menu.html" class="nav-link">Our Menu</a>      
+        </li>
+        <li class="nav-item">
+            <a href="ourcustomers.html" class="nav-link">Our Customers</a>      
+        </li>
+        <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>      
+        </li>
+        <li class="nav-item">
+            <a href="ourrestaurants.html" class="nav-link">Our Restaurants</a>      
+        </li>
+        <li class="nav-item">
+            <a href="validation.html" class="nav-link">Registration / Order</a>      
+        </li>
+    </ul>
+
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+  </nav>
+
+</header>
+
+
+<h2>Our Restaurants</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="filtertable">
+    <tr class="header">
+    <th style="width:50%;">City</th>
+    <th style="width:50%;"><Address></Address></th>
+</tr>
+  <tr>
+    <td>Tbilisi</td>
+    <td>Agmashenebeli st 60</td>
+  </tr>
+  <tr>
+    <td>Batumi</td>
+    <td>Khimshashvili str 69</td>
+  </tr>
+  <tr>
+    <td>Kutaisi</td>
+    <td>Tamar mefe st 15</td>
+  </tr>
+  <tr>
+    <td>Rustavi</td>
+    <td>Rustavi st 20</td>
+  </tr>
+</table>
+
+<footer class="footer">
+
+    <div class="footercontainer">
+
+        <div class="row">
+            <div class="footer-col">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="menu.html">Burgers/Pizzas</a></li>
+                    <li><a href="menu.html">Beverages</a></li>
+                    <li><a href="desserts..html">Desserts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>about us</h3>
+                <ul>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="ourrestaurants.html">Address</a></li>
+                </ul>
+                <p class="all">
+                    All Rights Reserved
+                </p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>follow us</h3>
+                <div class="social">
+                    <a
+                        href="#"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>                  
+                </div>             
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="scriptHambruger.js"></script>
+</body>
+</html>
